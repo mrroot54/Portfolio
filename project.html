@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title id="page-title">Project Details | Atul Kumar</title>
+    <meta name="description" content="PHP Web Developer & Cybersecurity Enthusiast">
+    <meta name="author" content="Atul Kumar">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===================================================================
+         *  Global Styles & Variables
+         * =================================================================== */
+        :root {
+            /* Colors */
+            --color-bg: #0a0a0a;
+            --color-bg-alt: #121212;
+            --color-bg-section: #1a1a1a;
+            --color-text: #f0f0f0;
+            --color-text-secondary: #b8b8b8;
+            --color-accent: #e60023;
+            --color-accent-hover: #ff0844;
+            --color-accent-light: rgba(230, 0, 35, 0.1);
+            --color-border: #2a2a2a;
+            --color-card: #161616;
+            --color-code-bg: #0d1117;
+            --color-code-text: #58a6ff;
+            --color-terminal-green: #4ade80;
+            
+            /* Fonts */
+            --font-primary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --font-code: 'Fira Code', monospace;
+            --font-display: 'Space Grotesk', sans-serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        h1 {
+            font-size: clamp(3.2rem, 8vw, 6.4rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(3.2rem, 5vw, 5rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        h3 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+            color: var(--color-text-secondary);
+            font-size: 1.8rem;
+            line-height: 1.8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.02em;
+        }
+
+        .project-info p {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-accent);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .project-info p:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .project-hero-description {
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+            margin-bottom: var(--spacing-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            font-weight: 400;
+            color: var(--color-text);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--color-accent-hover);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1.2rem 2.4rem;
+            border-radius: 0.4rem;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 0, 35, 0.3);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--color-accent);
+            color: #ffffff;
+        }
+
+        .btn--small {
+            padding: 0.8rem 1.6rem;
+            font-size: 1.4rem;
+        }
+        
+        /* NEW: Secondary Button Style */
+        .btn--secondary {
+            background-color: #007bff; /* A nice blue color */
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn--secondary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .container-wide {
+            max-width: 1400px;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+
+        /* Header/Navbar */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: var(--spacing-sm) 0;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            background-color: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--color-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo span {
+            color: var(--color-accent);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: var(--spacing-md);
+        }
+
+        .nav-link {
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: var(--color-text);
+            text-decoration: none;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--color-text);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Project Hero Section */
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 50px;
+        }
+
+        .project-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(230, 0, 35, 0.1) 0%, transparent 100%);
+        }
+
+        /* Matrix Rain Effect */
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .project-hero-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .project-hero-content {
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .project-hero-subtitle {
+            font-family: var(--font-code);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-md);
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(230, 0, 35, 0.1);
+            border-radius: 4px;
+            border-left: 3px solid var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero-subtitle::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(230, 0, 35, 0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            20%, 100% {
+                left: 100%;
+            }
+        }
+
+        .terminal-prompt {
+            color: var(--color-accent);
+            margin-right: 8px;
+        }
+
+        .project-hero-title {
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.1;
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            font-weight: 900;
+            position: relative;
+        }
+
+        .project-hero-title span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .code-tag {
+            font-family: var(--font-code);
+            font-size: 0.4em;
+            color: var(--color-text-secondary);
+            opacity: 0.7;
+            display: block;
+            margin: 10px 0;
+            font-weight: 400;
+        }
+
+        .project-hero-title .highlight {
+            color: var(--color-accent);
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg, var(--color-accent), #ff0844);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(230, 0, 35, 0.3);
+        }
+
+        .project-hero-title .highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background-color: rgba(230, 0, 35, 0.1);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .glitch {
+            position: relative;
+            color: var(--color-text);
+            font-size: inherit;
+            font-weight: inherit;
+            text-transform: uppercase;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 1s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            14% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            15% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            50% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                            0.05em 0 0 rgba(0, 255, 0, 0.75),
+                            0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            99% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                            0.05em 0 0 rgba(0, 255, 0, 0.75),
+                            0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            100% {
+                text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                            -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+        }
+
+        .project-hero-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-weight: 700;
+            font-size: clamp(1.4rem, 2vw, 1.6rem);
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1.4rem 2.8rem;
+            border-radius: 0.4rem;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+            box-shadow: 0 4px 15px rgba(230, 0, 35, 0.2);
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .code-bracket {
+            font-family: var(--font-code);
+            font-weight: 700;
+            margin: 0 5px;
+        }
+
+        .btn:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(230, 0, 35, 0.4);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+            box-shadow: none;
+        }
+
+        .btn--outline:hover {
+            background-color: var(--color-accent);
+            color: #ffffff;
+            box-shadow: 0 15px 25px rgba(230, 0, 35, 0.4);
+        }
+
+        /* Project Details Section */
+        .project-details {
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .project-details-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .project-info {
+            background-color: var(--color-card);
+            border-radius: 15px;
+            padding: var(--spacing-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .project-sidebar-card {
+            background-color: var(--color-card);
+            border-radius: 15px;
+            padding: var(--spacing-md);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-sidebar-card h3 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-accent);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .tech-item {
+            padding: 0.5rem 1rem;
+            background-color: rgba(230, 0, 35, 0.1);
+            border: 1px solid var(--color-accent);
+            border-radius: 50px;
+            font-size: 1.4rem;
+            color: var(--color-text);
+        }
+
+        .feature-list {
+            list-style-type: none;
+        }
+
+        .feature-list li {
+            margin-bottom: var(--spacing-xs);
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.6rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .benefit-list {
+            list-style-type: none;
+        }
+
+        .benefit-list li {
+            margin-bottom: var(--spacing-xs);
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.6rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .benefit-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        /* NEW: Project Download Section */
+        .project-download {
+            background-color: var(--color-bg);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .download-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-card);
+            border-radius: 15px;
+            padding: var(--spacing-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .download-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(230, 0, 35, 0.1);
+        }
+
+        .download-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .download-icon {
+            font-size: 5rem;
+            color: var(--color-accent);
+            margin-right: var(--spacing-md);
+        }
+
+        .download-details h3 {
+            font-size: 2.2rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-text);
+        }
+
+        .download-details p {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--color-text-secondary);
+        }
+
+        .download-details p span {
+            font-family: var(--font-mono);
+            color: var(--color-code-text);
+            background-color: var(--color-code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .btn--download {
+            background-color: #28a745; /* Green color for download */
+            color: #ffffff;
+            padding: 1.2rem 2.8rem;
+            font-size: 1.6rem;
+            border-radius: 0.4rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn--download:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        /* Project Screenshots Section */
+        .project-screenshots {
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .screenshots-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .screenshot-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(230, 0, 35, 0.2);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .screenshot-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--spacing-sm);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--color-text);
+            font-size: 1.4rem;
+            text-align: center;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .screenshot-item:hover .screenshot-caption {
+            transform: translateY(0);
+        }
+
+        /* NEW: Single Video Section Styles */
+        .project-video {
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background-color: var(--color-card);
+            position: relative;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background-color: #000;
+        }
+
+        .video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .video-controls {
+            opacity: 1;
+        }
+
+        .video-play-pause {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .video-play-pause:hover {
+            background-color: var(--color-accent);
+        }
+
+        .video-progress {
+            flex-grow: 1;
+            height: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 0.25rem;
+            margin: 0 1rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-progress-filled {
+            height: 100%;
+            background-color: var(--color-accent);
+            border-radius: 0.25rem;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .video-time {
+            color: white;
+            font-size: 1.4rem;
+            font-family: var(--font-mono);
+        }
+
+        .video-volume {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        .video-fullscreen {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        .video-caption {
+            padding: var(--spacing-md);
+            background-color: var(--color-card);
+            color: var(--color-text);
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        /* Image Modal/Lightbox */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(230, 0, 35, 0.3);
+            transition: opacity 0.2s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 2.4rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10001;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close:hover {
+            background-color: var(--color-accent-hover);
+            transform: rotate(90deg);
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--color-text);
+            font-size: 1.6rem;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(230, 0, 35, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10001;
+        }
+
+        .modal-nav:hover {
+            background-color: var(--color-accent);
+        }
+
+        .modal-prev {
+            left: 20px;
+        }
+
+        .modal-next {
+            right: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-text);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--color-accent);
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .footer-copyright {
+            font-size: 1.4rem;
+            color: var(--color-text-secondary);
+        }
+
+        .footer-copyright a {
+            color: var(--color-accent);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(230, 0, 35, 0.3);
+            border-top: 3px solid var(--color-accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .project-details-container { grid-template-columns: 1fr; }
+            .project-sidebar { grid-template-columns: repeat(2, 1fr); }
+            .download-container { flex-direction: column; text-align: center; gap: var(--spacing-md); }
+            .download-info { flex-direction: column; }
+            .download-icon { margin-right: 0; margin-bottom: var(--spacing-sm); }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                position: fixed; top: 0; right: -100%; width: 80%; height: 100vh;
+                background-color: var(--color-bg); flex-direction: column;
+                justify-content: center; align-items: center; transition: var(--transition); z-index: 999;
+            }
+            .nav.active { right: 0; }
+            .nav-item { margin: 0; margin-bottom: var(--spacing-md); }
+            .nav-link { font-size: 2rem; }
+            .mobile-menu-toggle { display: flex; z-index: 1000; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .project-sidebar { grid-template-columns: 1fr; }
+            .modal-close { width: 40px; height: 40px; font-size: 2rem; top: 10px; right: 10px; }
+            .modal-nav { width: 40px; height: 40px; font-size: 1.6rem; }
+            .modal-prev { left: 10px; }
+            .modal-next { right: 10px; }
+            .modal-caption { font-size: 1.4rem; bottom: 10px; }
+            .video-controls { padding: 0.5rem; }
+            .video-play-pause { width: 3rem; height: 3rem; font-size: 1.5rem; }
+            .video-time { font-size: 1.2rem; }
+            .video-volume, .video-fullscreen { font-size: 1.5rem; margin-left: 0.5rem; }
+        }
+
+        @media (max-width: 576px) {
+            .container { padding: 0 var(--spacing-sm); }
+            .section { padding: var(--spacing-lg) 0; }
+            h1 { font-size: clamp(2.8rem, 7vw, 4.8rem); }
+            h2 { font-size:  clamp(2.4rem, 6vw, 3.6rem); }
+            h3 { font-size: clamp(2rem, 5vw, 2.8rem); }
+            h4 { font-size: clamp(1.8rem, 4vw, 2.2rem); }
+            .screenshots-container { grid-template-columns: 1fr; }
+            .modal-close { width: 35px; height: 35px; font-size: 1.8rem; }
+            .modal-nav { width: 35px; height: 35px; font-size: 1.4rem; }
+            .modal-caption { font-size: 1.2rem; }
+            .project-hero { padding: 120px 0 60px; }
+            .project-hero-subtitle { margin-bottom: 1.5rem; }
+            .project-hero-title { margin-bottom: 2rem; }
+            .project-hero-buttons { margin-bottom: 2rem; }
+            .logo { font-size: 2rem; }
+            .back-to-top { width: 45px; height: 45px; font-size: 1.6rem; bottom: 20px; right: 20px; }
+            p { font-size: 1.7rem; line-height: 1.7; }
+            .project-info p { padding: 1.2rem; margin-bottom: 1.5rem; }
+            .project-hero-description { font-size: 1.7rem; padding: 1.2rem; }
+            .video-caption { font-size: 1.4rem; padding: var(--spacing-sm); }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- # header
+    ================================================== -->
+    <header class="header" id="header">
+        <div class="container container-wide">
+            <div class="header-container">
+                <a href="index.html" class="logo">Atul<span>.</span></a>
+                
+                <nav>
+                    <ul class="nav" id="nav">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#project-hero" class="nav-link active">Project</a></li>
+                        <li class="nav-item"><a href="#project-details" class="nav-link">About</a></li>
+                        <li class="nav-item" id="nav-download-item"><a href="#project-download" class="nav-link">Download</a></li>
+                        <li class="nav-item"><a href="#project-media" class="nav-link">Media</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- # project hero section
+    ================================================== -->
+    <section class="project-hero section" id="project-hero">
+        <div class="project-hero-bg">
+            <canvas id="matrix-rain" class="matrix-rain"></canvas>
+        </div>
+        
+        <div class="container container-wide">
+            <div class="project-hero-container">
+                <div class="project-hero-content fade-in">
+                    <div class="project-hero-subtitle">
+                        <span class="terminal-prompt">$</span> <span id="hero-category">project showcase</span>
+                    </div>
+                    <h1 class="project-hero-title">
+                        <span class="code-tag">&lt;h1&gt;</span>
+                        <span class="glitch" id="hero-title">Loading...</span>
+                        <span class="code-tag">&lt;/h1&gt;</span>
+                    </h1>
+                    <p class="project-hero-description" id="hero-description">
+                        <span class="code-comment">$ Loading project details...</span>
+                    </p>
+                    
+                    <div class="project-hero-buttons" id="hero-buttons">
+                        <!-- Buttons will be dynamically loaded -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- # project details section
+    ================================================== -->
+    <section class="project-details section" id="project-details">
+        <div class="container container-wide">
+            <div class="project-details-container">
+                <div class="project-info fade-in">
+                    <h2 class="section-title">About The Project</h2>
+                    <div id="project-info-content">
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="project-sidebar-card fade-in">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-list" id="tech-list">
+                            <!-- Technologies will be dynamically loaded -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-sidebar-card fade-in">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list" id="feature-list">
+                            <!-- Features will be dynamically loaded -->
+                        </ul>
+                    </div>
+                    
+                    <div class="project-sidebar-card fade-in">
+                        <h3>Benefits</h3>
+                        <ul class="benefit-list" id="benefit-list">
+                            <!-- Benefits will be dynamically loaded -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- # project download section
+    ================================================== -->
+    <section class="project-download section" id="project-download">
+        <div class="container container-wide">
+            <div class="section-title fade-in">
+                <h2 id="download-section-title">Get The Application</h2>
+            </div>
+            <div class="download-container fade-in" id="download-container">
+                <!-- Download content will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- # project media section (for images or videos)
+    ================================================== -->
+    <section class="project-media section" id="project-media">
+        <div class="container container-wide">
+            <div class="section-title fade-in">
+                <h2 id="media-section-title">Project Media</h2>
+            </div>
+            
+            <!-- Screenshots container (shown by default) -->
+            <div class="screenshots-container" id="screenshots-container">
+                <!-- Screenshots will be dynamically loaded -->
+            </div>
+            
+            <!-- Single video container (hidden by default) -->
+            <div class="video-container fade-in" id="video-container" style="display: none;">
+                <div class="video-wrapper">
+                    <video id="project-video" class="video-player" controls>
+                        <!-- Video source will be dynamically loaded -->
+                    </video>
+                    <div class="video-controls">
+                        <button class="video-play-pause" id="video-play-pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="video-progress" id="video-progress">
+                            <div class="video-progress-filled" id="video-progress-filled"></div>
+                        </div>
+                        <span class="video-time" id="video-time">00:00 / 00:00</span>
+                        <button class="video-volume" id="video-volume">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="video-fullscreen" id="video-fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-caption" id="video-caption">
+                    <!-- Video caption will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal/Lightbox -->
+    <div class="image-modal" id="image-modal">
+        <div class="modal-content">
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+            <div class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-nav modal-prev" id="modal-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="modal-nav modal-next" id="modal-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- # footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/mrroot54" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/mrroot54/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 All Rights Reserved. Design by <a href="#">Atul Kumar</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- # back to top button
+    ================================================== -->
+    <a href="#top" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Project Data - This contains all projects data
+        const projectsData = {
+            "integritycheck": {
+                title: "Integrity Check Pro",
+                category: "security tool",
+                description: "A professional GUI tool to calculate and verify SHA-256 file integrity, ensuring your data remains authentic and unaltered.",
+                githubUrl: "https://github.com/mrroot54/IntegrityCheck",
+                liveUrl: "",
+                info: [
+                    "Integrity Check Pro is a robust desktop application designed to provide absolute certainty over file integrity. In a digital world where data can be easily corrupted or tampered with, this tool serves as a critical line of defense, allowing users to verify that their files remain authentic and unaltered.",
+                    "The software operates on a simple yet powerful two-step process. First, it can generate a unique SHA-256 hash—a cryptographic digital fingerprint—for any file. Second, it can verify a file's current state against its original hash, instantly confirming whether the file is authentic or has been modified in any way.",
+                    "The user interface is built for simplicity and efficiency. A clean, modern dark theme reduces eye strain, while the dual-panel layout clearly separates the \"Create Hash\" and \"Verify Hash\" workflows. Users can interact with files effortlessly through either a convenient drag-and-drop zone or a traditional file browser, ensuring a fast and seamless experience. Real-time visual feedback, including a progress bar and status updates, keeps the user informed during every operation.",
+                    "Under the hood, Integrity Check Pro is engineered for performance and reliability. It leverages asynchronous processing to handle large files without interrupting the user experience, ensuring the application remains fully responsive. The application is built for universal access, with cross-platform compatibility for Windows, Linux, and macOS. For easy distribution, it can be packaged as a standalone executable, eliminating the need for users to install Python or any dependencies."
+                ],
+                technologies: ["Python 3", "tkinter", "tkinterdnd2", "hashlib", "threading", "setuptools", "PyInstaller", "Virtual Environment (venv)"],
+                features: [
+                    "SHA-256 cryptographic hashing for robust file integrity validation.",
+                    "Intuitive dual-panel GUI for streamlined hash creation and verification workflows.",
+                    "Seamless drag-and-drop file integration for an efficient and modern user experience.",
+                    "Asynchronous processing to ensure a non-blocking, responsive user interface.",
+                    "Real-time progress visualization for monitoring long-running hashing tasks.",
+                    "Instantaneous file integrity verification against known hash values.",
+                    "Capability for bundling into a standalone executable for dependency-free distribution.",
+                    "Cross-platform compatibility (Windows, Linux, macOS)."
+                ],
+                benefits: [
+                    "Early detection of unauthorized file modifications by instantly comparing current and original hash values.",
+                    "Peace of mind knowing your critical files are secure and have not been accidentally or maliciously altered.",
+                    "Simple to use with minimal configuration required, thanks to its intuitive drag-and-drop graphical interface.",
+                    "Lightweight resource usage ensures the application runs smoothly without slowing down your system.",
+                    "Can be automated to run on a schedule by integrating the core functionality into custom scripts.",
+                    "Helps maintain compliance with security standards by providing a reliable method for data integrity verification.",
+                    "Provides cryptographic evidence for forensic analysis if a security incident or data corruption needs to be investigated."
+                ],
+                download: {
+                    heading: "Get The Application",
+                    info: { os: "Linux", arch: "x64", version: "v2.1" },
+                    buttonText: "Download for Linux",
+                    url: "software/Integrity Check Pro" 
+                },
+                mediaType: "images",
+                screenshots: [
+                    { src: "images/projects/integritycheck/1.webp", thumb: "images/projects/integritycheck/1.webp", caption: "Main Application Interface" },
+                    { src: "images/projects/integritycheck/2.webp", thumb: "images/projects/integritycheck/2.webp", caption: "Selecting a File" },
+                    { src: "images/projects/integritycheck/3.webp", thumb: "images/projects/integritycheck/3.webp", caption: "Generating Hash Value" },
+                    { src: "images/projects/integritycheck/4.webp", thumb: "images/projects/integritycheck/4.webp", caption: "Hash Saved to File" },
+                    { src: "images/projects/integritycheck/5.webp", thumb: "images/projects/integritycheck/5.webp", caption: "File Selected for Verification" },
+                    { src: "images/projects/integritycheck/6.webp", thumb: "images/projects/integritycheck/6.webp", caption: "Verification Successful" },
+                    { src: "images/projects/integritycheck/7.webp", thumb: "images/projects/integritycheck/7.webp", caption: "File Modified" },
+                    { src: "images/projects/integritycheck/8.webp", thumb: "images/projects/integritycheck/8.webp", caption: "Verification Failed" }
+                ]
+            },
+            "studentmanagement": {
+                title: "Student Management System",
+                category: "education management",
+                description: "A comprehensive system for managing student records, fees, and academic information with an easy-to-use interface.",
+                githubUrl: "#",
+                liveUrl: "#",
+                info: [
+                    "The Student Management System is a comprehensive web application designed to simplify the management of student information in educational institutions. It provides a user-friendly interface for administrators to handle all aspects of student data efficiently.",
+                    "This system features a secure admin login that protects sensitive information. Administrators can easily add new students through a detailed entry form that captures all essential information including personal details, contact information, course enrollment, and payment history.",
+                    "The fee management module allows for tracking payments with different payment methods (UPI and Cash), monitoring due amounts, and generating payment reports. The system provides clear visual indicators for students with pending fees.",
+                    "With its intuitive design, the system works seamlessly on both desktop and mobile devices, making it accessible anytime, anywhere. The search and filter functions make it easy to find specific students or groups of students based on various criteria."
+                ],
+                technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "jQuery"],
+                features: [
+                    "Secure admin login with password protection",
+                    "Student entry form with photo upload",
+                    "Batch management (11th, 12th, NEET, JEE)",
+                    "Fee tracking with payment history",
+                    "Multiple payment modes (UPI, Cash)",
+                    "Student search and filter options",
+                    "Dues checker with PDF report generation",
+                    "Month and year-wise payment reports",
+                    "Edit student information",
+                    "Mobile responsive design"
+                ],
+                benefits: [
+                    "Simplifies student record management",
+                    "Reduces paperwork and manual errors",
+                    "Easy tracking of fee payments",
+                    "Quick access to student information",
+                    "Helps in organizing students by batches",
+                    "Improves communication with students",
+                    "Saves time with automated calculations",
+                    "Provides clear financial reports",
+                    "Accessible from any device"
+                ],
+                download: null,
+                mediaType: "images",
+                screenshots: [
+                    { src: "images/projects/student-management/1.webp", thumb: "images/projects/student-management/1.webp", caption: "Admin Login Page" },
+                    { src: "images/projects/student-management/2.webp", thumb: "images/projects/student-management/2.webp", caption: "Student Entry Form" },
+                    { src: "images/projects/student-management/3.webp", thumb: "images/projects/student-management/3.webp", caption: "All Students List" },
+                    { src: "images/projects/student-management/4.webp", thumb: "images/projects/student-management/4.webp", caption: "Student Details and Payment History" },
+                    { src: "images/projects/student-management/5.webp", thumb: "images/projects/student-management/5.webp", caption: "Make Payment Form" },
+                    { src: "images/projects/student-management/6.webp", thumb: "images/projects/student-management/6.webp", caption: "Edit Student Information" },
+                    { src: "images/projects/student-management/7.webp", thumb: "images/projects/student-management/7.webp", caption: "Student Dues Checker" },
+                    { src: "images/projects/student-management/8.webp", thumb: "images/projects/student-management/8.webp", caption: "Month & Year-wise Payment Report" }
+                ]
+            },
+            "jobportfolio": {
+                title: "Job Portal",
+                category: "job portal",
+                description: "This website is made to connect job seekers and employers. Companies can register and list jobs here, and a third party manages the entire process.",
+                githubUrl: "#",
+                liveUrl: "#",
+                info: [
+                    "Job Portal is a comprehensive job portal platform designed to bridge the gap between job seekers and employers. It provides a streamlined interface for companies to post job openings and for candidates to find their dream positions.",
+                    "The platform features a multi-tiered system where companies can register and create detailed profiles, post job listings with comprehensive descriptions, requirements, and salary ranges. Job seekers can create professional profiles, upload resumes, and apply directly through the platform.",
+                    "A unique aspect of this system is the third-party management functionality, which oversees the entire process to ensure quality control, fair practices, and efficient matching between candidates and positions. This intermediary handles verification, scheduling, and initial screening processes.",
+                    "The platform includes advanced filtering and search capabilities, notification systems for new matching opportunities, and analytics dashboards for both employers and job seekers to track application progress and market trends."
+                ],
+                technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "jQuery", "Ajax"],
+                features: [
+                    "Company registration and profile management",
+                    "Job posting with detailed descriptions and requirements",
+                    "Job seeker profiles with resume upload functionality",
+                    "Advanced search and filtering for both jobs and candidates",
+                    "Application tracking system for employers",
+                    "Third-party management dashboard for oversight",
+                    "Notification system for new opportunities",
+                    "Analytics and reporting tools",
+                    "Mobile responsive design",
+                    "Secure messaging between parties"
+                ],
+                benefits: [
+                    "Streamlines the hiring process for companies",
+                    "Provides a centralized platform for job seekers",
+                    "Reduces time-to-hire with efficient matching algorithms",
+                    "Third-party oversight ensures quality and fairness",
+                    "Improves visibility for job opportunities",
+                    "Simplifies application management and tracking",
+                    "Provides valuable market insights through analytics",
+                    "Enhances communication between all stakeholders",
+                    "Reduces administrative burden through automation"
+                ],
+                download: null,
+                mediaType: "video",
+                video: {
+                    src: "videos/job/video.mp4",
+                    caption: "Job Portal Platform Demo"
+                }
+            },
+            "saadiwala": {
+                title: "Saadiwala",
+                category: "hospitality booking",
+                description: "This website has many hotels, resorts, and banquet halls listed. You can see photos, check their location and details, make an enquiry, and even book them online.",
+                githubUrl: "#",
+                liveUrl: "https://saadiwala.com/",
+                info: [
+                    "Saadiwala is a comprehensive hospitality booking platform designed to connect users with a wide range of accommodation options including hotels, resorts, and banquet halls. The platform offers a seamless experience for both property owners and customers looking for the perfect venue for their events or stays.",
+                    "The website features an intuitive search and filtering system that allows users to find properties based on location, price range, amenities, and availability. Each property listing includes detailed information, high-quality photos, virtual tours, and customer reviews to help users make informed decisions.",
+                    "For property owners, Saadiwala provides a comprehensive dashboard to manage listings, update availability, respond to inquiries, and process bookings. The platform also offers analytics tools to track performance and optimize pricing strategies.",
+                    "The booking system is designed to be secure and efficient, with multiple payment options, instant confirmation, and automated reminders. The platform also includes a review and rating system to maintain quality standards and build trust among users."
+                ],
+                technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "jQuery", "Ajax", "Google Maps API", "Payment Gateway Integration"],
+                features: [
+                    "Advanced search and filtering for properties",
+                    "Detailed property listings with photo galleries",
+                    "Interactive map integration for location visualization",
+                    "Online booking system with real-time availability",
+                    "Secure payment processing with multiple options",
+                    "User accounts with booking history and preferences",
+                    "Property owner dashboard for listing management",
+                    "Review and rating system for quality assurance",
+                    "Mobile responsive design for on-the-go bookings",
+                    "Automated email notifications and reminders"
+                ],
+                benefits: [
+                    "Simplifies the process of finding and booking accommodations",
+                    "Provides a centralized platform for property owners to reach customers",
+                    "Increases visibility for smaller hotels and venues",
+                    "Reduces booking friction with instant confirmation",
+                    "Helps users make informed decisions with detailed information and reviews",
+                    "Streamlines property management for owners with automated tools",
+                    "Enhances customer experience with personalized recommendations",
+                    "Improves occupancy rates through optimized pricing strategies",
+                    "Builds trust through transparent reviews and ratings"
+                ],
+                download: null,
+                mediaType: "none", // Changed from "images" to "none" to remove screenshots
+                screenshots: [] // Empty array to prevent loading any screenshots
+            },
+            "crudapp": {
+                title: "CRUD Application",
+                category: "web application",
+                description: "A complete Create, Read, Update, Delete application built with CodeIgniter4, demonstrating database operations and form handling.",
+                githubUrl: "https://github.com/mrroot54/codeigniter4-crud",
+                liveUrl: "#",
+                info: [
+                    "This CRUD application is a perfect demonstration of CodeIgniter4's MVC architecture and database capabilities. Built from the ground up following best practices, this application showcases how to perform essential database operations efficiently and securely.",
+                    "The application features a clean, modern interface with responsive design that works seamlessly across all devices. The user interface is intuitive, allowing users to easily add, view, edit, and delete records without any technical knowledge.",
+                    "Security has been a top priority in this application. All form inputs are properly validated and sanitized to prevent SQL injection and XSS attacks. CSRF protection is enabled for all forms, and password hashing is implemented where user authentication is required.",
+                    "The code is well-structured and follows CodeIgniter4 conventions, making it easy to maintain and extend. Each component has its specific role: Models handle database interactions, Views manage the presentation layer, and Controllers process user requests and coordinate between Models and Views."
+                ],
+                technologies: ["PHP 8", "CodeIgniter4", "MySQL", "Bootstrap 5", "jQuery", "Ajax", "JSON"],
+                features: [
+                    "Complete CRUD operations (Create, Read, Update, Delete)",
+                    "Responsive design with Bootstrap 5",
+                    "Form validation and error handling",
+                    "Ajax-based operations for better user experience",
+                    "Data pagination for large datasets",
+                    "Search and filter functionality",
+                    "Sorting capabilities",
+                    "CSRF protection for security",
+                    "Session management",
+                    "Clean URL structure with routing"
+                ],
+                benefits: [
+                    "Demonstrates proficiency in CodeIgniter4 framework",
+                    "Shows understanding of MVC architecture",
+                    "Exhibits database design and management skills",
+                    "Highlights security best practices implementation",
+                    "Provides a foundation for more complex applications",
+                    "Can be customized for various data management needs",
+                    "Optimized for performance with efficient database queries",
+                    "Well-documented code for easy maintenance"
+                ],
+                download: null,
+                mediaType: "images",
+                screenshots: [
+                    { src: "images/projects/codeigniter/crud/1.webp", thumb: "images/projects/codeigniter/crud/1.webp", caption: "Add New Record" },
+                    { src: "images/projects/codeigniter/crud/2.webp", thumb: "images/projects/codeigniter/crud/2.webp", caption: "View Record Details" },
+                    { src: "images/projects/codeigniter/crud/3.webp", thumb: "images/projects/codeigniter/crud/3.webp", caption: "Edit Record Form" },
+                    { src: "images/projects/codeigniter/crud/4.webp", thumb: "images/projects/codeigniter/crud/4.webp", caption: "Delete Record Details" },
+                    
+                    
+                    
+                    
+                ]
+            },
+            "blogapp": {
+                title: "Blog Application",
+                category: "content management",
+                description: "A full-featured blog system with user authentication, post management, comments, and categories built using CodeIgniter4.",
+                githubUrl: "https://github.com/mrroot54/codeigniter4-blog",
+                liveUrl: "#",
+                info: [
+                    "This Blog Application is a comprehensive content management system built with CodeIgniter4, designed to provide a seamless blogging experience. It demonstrates advanced features including user authentication, role-based access control, and content management capabilities.",
+                    "The application features a clean, modern interface with a focus on readability and user experience. The front-end is designed to showcase blog posts attractively, while the admin panel provides powerful tools for content management without overwhelming the user.",
+                    "Security has been implemented at multiple levels. User passwords are securely hashed, session management is properly implemented, and all user inputs are validated and sanitized. The application also includes protection against common web vulnerabilities like XSS and CSRF attacks.",
+                    "The architecture follows CodeIgniter4's MVC pattern strictly, with clear separation of concerns. Models handle all database operations, Views manage the presentation layer, and Controllers coordinate the application flow. This makes the code maintainable, scalable, and easy to understand."
+                ],
+                technologies: ["PHP 8", "CodeIgniter4", "MySQL", "Bootstrap 5", "jQuery", "Ajax", "Markdown", "TinyMCE"],
+                features: [
+                    "User registration and authentication system",
+                    "Role-based access control (Admin, Author, User)",
+                    "Rich text editor for creating and editing posts",
+                    "Category and tag management",
+                    "Comment system with moderation",
+                    "Post scheduling and drafts",
+                    "SEO-friendly URLs and meta tags",
+                    "Search functionality",
+                    "Post analytics and views tracking",
+                    "Responsive design for all devices",
+                    "Social media sharing integration",
+                    "RSS feed generation"
+                ],
+                benefits: [
+                    "Demonstrates advanced CodeIgniter4 skills",
+                    "Shows understanding of authentication and authorization",
+                    "Exhibits content management system development",
+                    "Highlights security implementation in web applications",
+                    "Provides a complete solution for blogging needs",
+                    "Can be extended for more complex CMS requirements",
+                    "Optimized for search engines with SEO features",
+                    "Well-documented code following best practices"
+                ],
+                download: null,
+                mediaType: "images",
+                screenshots: [
+                    { src: "images/projects/codeigniter-blog/1.webp", thumb: "images/projects/codeigniter-blog/1.webp", caption: "Blog Home Page" },
+                    { src: "images/projects/codeigniter-blog/2.webp", thumb: "images/projects/codeigniter-blog/2.webp", caption: "Blog Post Detail View" },
+                    { src: "images/projects/codeigniter-blog/3.webp", thumb: "images/projects/codeigniter-blog/3.webp", caption: "User Login Page" },
+                    { src: "images/projects/codeigniter-blog/4.webp", thumb: "images/projects/codeigniter-blog/4.webp", caption: "Admin Dashboard" },
+                    { src: "images/projects/codeigniter-blog/5.webp", thumb: "images/projects/codeigniter-blog/5.webp", caption: "Create/Edit Post with Rich Text Editor" },
+                    { src: "images/projects/codeigniter-blog/6.webp", thumb: "images/projects/codeigniter-blog/6.webp", caption: "Category Management" },
+                    { src: "images/projects/codeigniter-blog/7.webp", thumb: "images/projects/codeigniter-blog/7.webp", caption: "User Management" },
+                    { src: "images/projects/codeigniter-blog/8.webp", thumb: "images/projects/codeigniter-blog/8.webp", caption: "Comment Moderation" }
+                ]
+            }
+        };
+
+        // Get project ID from URL
+        function getProjectId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('project') || 'studentmanagement'; // Default project
+        }
+
+        // Load project data
+        function loadProject(projectId) {
+            const project = projectsData[projectId];
+            
+            if (!project) {
+                loadProject('studentmanagement');
+                return;
+            }
+
+            // Update page title
+            document.getElementById('page-title').textContent = `${project.title} | Atul Kumar`;
+            
+            // Update hero section
+            document.getElementById('hero-category').textContent = project.category;
+            document.getElementById('hero-title').textContent = project.title;
+            document.getElementById('hero-description').innerHTML = `<span class="code-comment">$ ${project.description}</span>`;
+            
+            // Update hero buttons
+            const buttonsHtml = `
+                <a href="${project.githubUrl}" class="btn" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                ${project.liveUrl ? `<a href="${project.liveUrl}" class="btn btn--outline" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>` : `<a href="#project-details" class="btn btn--outline">
+                    <i class="fas fa-arrow-down"></i> Learn More
+                </a>`}
+            `;
+            document.getElementById('hero-buttons').innerHTML = buttonsHtml;
+            
+            // Update project info
+            const infoHtml = project.info.map(p => `<p>${p}</p>`).join('');
+            document.getElementById('project-info-content').innerHTML = infoHtml;
+            
+            // Update technologies
+            const techHtml = project.technologies.map(tech => `<div class="tech-item">${tech}</div>`).join('');
+            document.getElementById('tech-list').innerHTML = techHtml;
+            
+            // Update features
+            const featureHtml = project.features.map(feature => `<li>${feature}</li>`).join('');
+            document.getElementById('feature-list').innerHTML = featureHtml;
+            
+            // Update benefits
+            const benefitHtml = project.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+            document.getElementById('benefit-list').innerHTML = benefitHtml;
+
+            // --- Update Download Section ---
+            if (project.download) {
+                document.getElementById('download-section-title').textContent = project.download.heading;
+                const downloadHtml = `
+                    <div class="download-info">
+                        <i class="fas fa-desktop download-icon"></i>
+                        <div class="download-details">
+                            <h3>${project.title}</h3>
+                            <p>OS: <span>${project.download.info.os}</span> | Arch: <span>${project.download.info.arch}</span> | Version: <span>${project.download.info.version}</span></p>
+                        </div>
+                    </div>
+                    <a href="${project.download.url}" class="btn btn--download" target="_blank">
+                        <i class="fas fa-download"></i> ${project.download.buttonText}
+                    </a>
+                `;
+                document.getElementById('download-container').innerHTML = downloadHtml;
+                document.getElementById('project-download').style.display = 'block'; // Show the section
+            } else {
+                // Hide the download section if no download data is available
+                document.getElementById('project-download').style.display = 'none';
+            }
+            
+            // --- Update Media Section based on mediaType ---
+            if (project.mediaType === "video") {
+                // Show video, hide screenshots
+                document.getElementById('media-section-title').textContent = "Project Video";
+                document.getElementById('screenshots-container').style.display = 'none';
+                document.getElementById('video-container').style.display = 'block';
+                
+                // Load video
+                const videoElement = document.getElementById('project-video');
+                videoElement.src = project.video.src;
+                document.getElementById('video-caption').textContent = project.video.caption;
+                
+                // Initialize video controls
+                initializeVideoControls();
+            } else if (project.mediaType === "none") {
+                // Hide both video and screenshots for projects with no media
+                document.getElementById('project-media').style.display = 'none';
+            } else {
+                // Show screenshots, hide video
+                document.getElementById('project-media').style.display = 'block';
+                document.getElementById('media-section-title').textContent = "Project Screenshots";
+                document.getElementById('screenshots-container').style.display = 'grid';
+                document.getElementById('video-container').style.display = 'none';
+                
+                // Load screenshots
+                const screenshotsHtml = project.screenshots.map((screenshot, index) => `
+                    <div class="screenshot-item fade-in" data-src="${screenshot.src}" data-caption="${screenshot.caption}">
+                        <img src="${screenshot.thumb}" alt="${screenshot.caption}">
+                        <div class="screenshot-caption">${screenshot.caption}</div>
+                    </div>
+                `).join('');
+                document.getElementById('screenshots-container').innerHTML = screenshotsHtml;
+            }
+            
+            // --- Handle Download Link Visibility in Navbar ---
+            const projectsWithoutDownloadLink = ['studentmanagement', 'jobportfolio', 'saadiwala', 'crudapp', 'blogapp'];
+            const downloadNavLink = document.getElementById('nav-download-item');
+
+            if (projectsWithoutDownloadLink.includes(projectId)) {
+                downloadNavLink.style.display = 'none';
+            } else {
+                downloadNavLink.style.display = 'block'; // Ensure it's visible for other projects
+            }
+            
+            // Re-initialize animations for new content
+            setTimeout(() => {
+                $('.fade-in').each(function() {
+                    $(this).addClass('active');
+                });
+            }, 100);
+        }
+
+        // Initialize video controls
+        function initializeVideoControls() {
+            const video = document.getElementById('project-video');
+            const playPauseBtn = document.getElementById('video-play-pause');
+            const progressBar = document.getElementById('video-progress');
+            const progressFilled = document.getElementById('video-progress-filled');
+            const timeDisplay = document.getElementById('video-time');
+            const volumeBtn = document.getElementById('video-volume');
+            const fullscreenBtn = document.getElementById('video-fullscreen');
+            
+            // Play/Pause functionality
+            playPauseBtn.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play();
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    video.pause();
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+            
+            // Update progress bar
+            video.addEventListener('timeupdate', function() {
+                const progress = (video.currentTime / video.duration) * 100;
+                progressFilled.style.width = progress + '%';
+                
+                // Update time display
+                const currentMinutes = Math.floor(video.currentTime / 60);
+                const currentSeconds = Math.floor(video.currentTime % 60).toString().padStart(2, '0');
+                const durationMinutes = Math.floor(video.duration / 60) || 0;
+                const durationSeconds = Math.floor(video.duration % 60).toString().padStart(2, '0') || '00';
+                
+                timeDisplay.textContent = `${currentMinutes}:${currentSeconds} / ${durationMinutes}:${durationSeconds}`;
+            });
+            
+            // Seek functionality
+            progressBar.addEventListener('click', function(e) {
+                const rect = progressBar.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                video.currentTime = pos * video.duration;
+            });
+            
+            // Volume control
+            let isMuted = false;
+            volumeBtn.addEventListener('click', function() {
+                if (isMuted) {
+                    video.muted = false;
+                    volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                } else {
+                    video.muted = true;
+                    volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                }
+                isMuted = !isMuted;
+            });
+            
+            // Fullscreen functionality
+            fullscreenBtn.addEventListener('click', function() {
+                if (!document.fullscreenElement) {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.webkitRequestFullscreen) { /* Safari */
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { /* IE11 */
+                        video.msRequestFullscreen();
+                    }
+                    fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) { /* Safari */
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) { /* IE11 */
+                        document.msExitFullscreen();
+                    }
+                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            });
+            
+            // Listen for fullscreen change events
+            document.addEventListener('fullscreenchange', handleFullscreenChange);
+            document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+            document.addEventListener('msfullscreenchange', handleFullscreenChange);
+            
+            function handleFullscreenChange() {
+                if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                } else {
+                    fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+                }
+            }
+        }
+
+        $(document).ready(function() {
+            const projectId = getProjectId();
+            loadProject(projectId);
+            
+            // Mobile Menu Toggle
+            $('#mobile-menu-toggle').on('click', function() {
+                $(this).toggleClass('active');
+                $('#nav').toggleClass('active');
+            });
+            
+            $('.nav-link').on('click', function() {
+                $('#mobile-menu-toggle').removeClass('active');
+                $('#nav').removeClass('active');
+            });
+            
+            // Header scroll effect
+            $(window).on('scroll', function() {
+                if ($(this).scrollTop() > 50) {
+                    $('#header').addClass('scrolled');
+                } else {
+                    $('#header').removeClass('scrolled');
+                }
+            });
+            
+            // Back to top button
+            $(window).on('scroll', function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').addClass('active');
+                } else {
+                    $('#back-to-top').removeClass('active');
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 80
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            
+            // Active navigation link based on scroll position
+            $(window).on('scroll', function() {
+                let scrollPosition = $(window).scrollTop();
+                let windowHeight = $(window).height();
+                let documentHeight = $(document).height();
+                
+                $('.nav-link').removeClass('active');
+                
+                if (scrollPosition + windowHeight >= documentHeight - 100) {
+                    $('.nav-link[href="#project-media"]').addClass('active');
+                    return;
+                }
+                
+                $('.section').each(function() {
+                    let sectionTop = $(this).offset().top;
+                    let sectionBottom = sectionTop + $(this).outerHeight();
+                    let sectionId = $(this).attr('id');
+                    
+                    if (scrollPosition + windowHeight / 2 >= sectionTop && scrollPosition + windowHeight / 2 <= sectionBottom) {
+                        $(`.nav-link[href="#${sectionId}"]`).addClass('active');
+                        return false;
+                    }
+                });
+                
+                if (scrollPosition < 100) {
+                    $('.nav-link').removeClass('active');
+                    $('.nav-link[href="#project-hero"]').addClass('active');
+                }
+            });
+            
+            // Fade in animation on scroll
+            function animateOnScroll() {
+                $('.fade-in').each(function() {
+                    let elementPos = $(this).offset().top;
+                    let scrollPos = $(window).scrollTop();
+                    let windowHeight = $(window).height();
+                    if (elementPos < scrollPos + windowHeight - 100) {
+                        $(this).addClass('active');
+                    }
+                });
+            }
+            $(window).on('scroll', animateOnScroll);
+            animateOnScroll();
+            
+            // Matrix Rain Effect
+            const matrixCanvas = document.getElementById('matrix-rain');
+            const matrixCtx = matrixCanvas.getContext('2d');
+            function resizeMatrixCanvas() {
+                matrixCanvas.width = window.innerWidth;
+                matrixCanvas.height = window.innerHeight;
+            }
+            resizeMatrixCanvas();
+            window.addEventListener('resize', resizeMatrixCanvas);
+            const matrixChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+            const matrixCharArray = matrixChars.split("");
+            const fontSize = 10;
+            const columns = matrixCanvas.width / fontSize;
+            const drops = [];
+            for (let x = 0; x < columns; x++) { drops[x] = 1; }
+            function drawMatrix() {
+                matrixCtx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+                matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+                matrixCtx.fillStyle = '#0F0';
+                matrixCtx.font = fontSize + 'px monospace';
+                for (let i = 0; i < drops.length; i++) {
+                    const text = matrixCharArray[Math.floor(Math.random() * matrixCharArray.length)];
+                    matrixCtx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            setInterval(drawMatrix, 35);
+            
+            // Image Modal/Lightbox functionality
+            $(document).on('click', '.screenshot-item', function() {
+                const src = $(this).data('src');
+                const caption = $(this).data('caption');
+                $('#modal-image').attr('src', src);
+                $('#modal-caption').text(caption);
+                currentImageIndex = $('.screenshot-item').index(this);
+                $('#image-modal').addClass('active');
+                $('body').css('overflow', 'hidden');
+                updateNavigationButtons();
+            });
+            
+            $('#modal-close').on('click', closeModal);
+            $('#image-modal').on('click', function(e) { 
+                if (e.target === this) { closeModal(); } 
+            });
+            $(document).on('keydown', function(e) { 
+                if (e.key === 'Escape' && $('#image-modal').hasClass('active')) { closeModal(); } 
+            });
+            $('#modal-prev').on('click', function(e) { 
+                e.stopPropagation(); navigateToImage(currentImageIndex - 1); 
+            });
+            $('#modal-next').on('click', function(e) { 
+                e.stopPropagation(); navigateToImage(currentImageIndex + 1); 
+            });
+            $(document).on('keydown', function(e) {
+                if (!$('#image-modal').hasClass('active')) return;
+                if (e.key === 'ArrowLeft') { navigateToImage(currentImageIndex - 1); } 
+                else if (e.key === 'ArrowRight') { navigateToImage(currentImageIndex + 1); }
+            });
+            
+            function closeModal() {
+                $('#image-modal').removeClass('active');
+                $('body').css('overflow', 'auto');
+            }
+            
+            let currentImageIndex = 0;
+            
+            function navigateToImage(index) {
+                const screenshots = $('.screenshot-item');
+                if (index < 0) { index = screenshots.length - 1; } 
+                else if (index >= screenshots.length) { index = 0; }
+                currentImageIndex = index;
+                const src = screenshots.eq(index).data('src');
+                const caption = screenshots.eq(index).data('caption');
+                $('#modal-image').css('opacity', '0');
+                setTimeout(function() {
+                    $('#modal-image').attr('src', src);
+                    $('#modal-caption').text(caption);
+                    $('#modal-image').css('opacity', '1');
+                }, 200);
+                updateNavigationButtons();
+            }
+            
+            function updateNavigationButtons() {
+                $('#modal-prev').show();
+                $('#modal-next').show();
+            }
+            
+            let touchStartX = 0;
+            let touchEndX = 0;
+            $('#image-modal').on('touchstart', function(e) { 
+                touchStartX = e.originalEvent.changedTouches[0].screenX; 
+            });
+            $('#image-modal').on('touchend', function(e) {
+                touchEndX = e.originalEvent.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) { navigateToImage(currentImageIndex + 1); } 
+                    else { navigateToImage(currentImageIndex - 1); }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
